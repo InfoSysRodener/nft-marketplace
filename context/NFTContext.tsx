@@ -97,7 +97,7 @@ export const NFTProvider = ({ children } : { children: React.ReactNode }) => {
             const added = await client.add(data);
             const url = `${subdomain}/ipfs/${added.path}`;
 
-            await createSale(url,price);
+            await createSale(url,price,null,null);
 
             router.push('/');
 
