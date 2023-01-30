@@ -10,16 +10,12 @@
   },
   "dependencies": {
     "@next/font": "13.1.1",
-    "@nomiclabs/hardhat-ethers": "2.0.5",
-    "@nomiclabs/hardhat-waffle": "2.0.3",
     "@openzeppelin/contracts": "4.5.0",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.10",
     "axios": "0.26.0",
     "eslint-config-next": "13.1.1",
-    "ethers": "5.5.4",
-    "hardhat": "2.9.0",
     "ipfs-http-client": "56.0.1",
     "next": "13.1.1",
     "next-themes": "0.1.1",
@@ -29,8 +25,11 @@
     "web3modal": "1.9.5"
   },
   "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^5.48.0",
     "autoprefixer": "^10.4.2",
+    "chai": "^4.2.0",
     "eslint": "^8.31.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-next": "12.1.0",
@@ -41,6 +40,9 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "4.3.0",
+    "ethereum-waffle": "^3.0.0",
+    "ethers": "^5.0.0",
+    "hardhat": "^2.9.0",
     "postcss": "^8.4.7",
     "tailwindcss": "^3.0.23",
     "typescript": "^4.9.4"
