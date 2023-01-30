@@ -109,7 +109,7 @@ export const NFTProvider = ({ children } : { children: React.ReactNode }) => {
     }
 
 
-    const createSale =async (url:any,formInputPrice:any,isReselling?:any,id ) => {
+    const createSale =async (url:any,formInputPrice:any,isReselling:any,id: any ) => {
         const web3Modal = new Web3Modal();
         const connection = await web3Modal.connect();
         const provider = new ethers.providers.Web3Provider(connection);
