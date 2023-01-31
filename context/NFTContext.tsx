@@ -5,10 +5,10 @@ import axios from 'axios';
 import { MarketAddress , MarketAddressABI } from './constants';
 
 import { create as  ipfsHttpClient } from 'ipfs-http-client';
-
-const projectId = process.env.NEXT_PUBLIC_IPFS_PROJECT_ID;
-const projectSecret = process.env.NEXT_PUBLIC_IPFS_API_KEY_SECRET;
-const subdomain = process.env.NEXT_PUBLIC_IPFS_API_ENDPOINT;
+const ALCHEMY_API_KEY = process.env.REACT_APP_API_KEY;
+const projectId = process.env.REACT_APP_IPFS_PROJECT_ID;
+const projectSecret = process.env.REACT_APP_IPFS_API_KEY_SECRET;
+const subdomain = process.env.REACT_APP_IPFS_API_ENDPOINT;
 const auth = `Basic ${Buffer.from(`${projectId}:${projectSecret}`).toString('base64')}`;
 
 const client = ipfsHttpClient({
@@ -130,7 +130,7 @@ export const NFTProvider = ({ children } : { children: React.ReactNode }) => {
 
 
     const fetchNFTs = async () => {
-        const provider = new ethers.providers.JsonRpcProvider('https://eth-goerli.g.alchemy.com/v2/ntdvzlM2nfLiY6Q_K57AMu6Ti2zaNXXU');
+        const provider = new ethers.providers.JsonRpcProvider(`https://eth-goerli.g.alchemy.com/v2/${ALCHEMY_API_KEY}`);
         const contract = fetchContract(provider);
 
         const data = await contract.fetchMarketItems();
